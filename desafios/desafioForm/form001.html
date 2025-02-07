@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Treino de formulario</h1>
+    <form action="formulario.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome">
+            </p>
+            <p>
+                <label for="iidade">Data de Nascimento:</label>
+                <input type="date" name="idade" id="iidade">
+            </p>
+        
+            <p>
+                <label for="igen">Genero:</label>
+                <select name="gen" id="igen">
+                    <option value="" selected>--- Escolha ---</option>
+                    <option value="MAS">Masculino</option>
+                    <option value="FEM">Feminino</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Profissionais</legend>
+            <p>
+                <label for="iprof">Profissão:</label>
+                <select name="prof" id="iprof">
+                    <option value="">--- Escolha ---</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="ENG">Engenheiro</option>
+                    <option value="MED">Medico</option>
+                    <option value="JOGB">Jogador de Basquete</option>
+                </select>
+            </p>
+            <p>
+                <label for="icarg">Cargo:</label>
+                <input type="text" name="icarg" id="icarg" list="ilist">
+                <datalist id="ilist">
+                    <option>Jovem Aprendiz</option>
+                    <option>Estagio</option>
+                    <option>Trainee</option>
+                    <option>Junior</option>
+                    <option>Pleno</option>
+                    <option>Sernior</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="iexp">Função:</label><br>
+                <textarea name="exp" id="iexp" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
